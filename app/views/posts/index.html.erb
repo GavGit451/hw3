@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+
+<% posts = Post.all %>
+
+<p>There are <%= posts.count %> posts</p>
+
+<ul>
+  <% for post in posts %>
+    <li>
+      <% place = Place.find_by({"id" => post["place_id"]}) %>
+      <%= post["title"] %> <%= post["description"] %> <%= post["posted_on"] %> @ <%= post["place_id"]%>
+    <li>
+  <% end %>
+</ul>
