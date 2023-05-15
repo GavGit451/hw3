@@ -2,8 +2,6 @@
 
 <% places = Place.all %>
 
-<p> There are <%= places.count %> places</p>
-
 <ul>
   <% for place in places %>
     <li>
@@ -13,3 +11,5 @@
       </li>
   <% end %>
 </ul>
+
+<a href="/places/new">New Place</a>
