@@ -8,7 +8,7 @@
   <% for post in posts %>
     <li>
       <% place = Place.find_by({"id" => post["place_id"]}) %>
-      <%= post["title"] %> <%= post["description"] %> <%= post["posted_on"] %> @ <%= post["place_id"]%>
+      <%= post["title"] %> <%= post["description"] %> <%= post["posted_on"] %> @ <%= place["name"]%>
     <li>
   <% end %>
 </ul>
