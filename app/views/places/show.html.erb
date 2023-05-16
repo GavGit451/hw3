@@ -1,10 +1,7 @@
 <h1><%= @place["name"]%> </h1>
 
-<% posts = Post.all %>
-
-
 <ul>
-  <% for post in posts %>
+  <% for post in @posts %>
     <li>
       <% place = Place.find_by({"id" => post["place_id"]}) %>
       <%= post["title"] %> <%= post["created_at"] %> @ <%= place["name"]%>
